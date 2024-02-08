@@ -14,6 +14,7 @@ ${city}    Bangalore
 ${PINcode}  560076
 ${phoneNo}  9763824464
 ${address}  BTM,stage 2
+
 *** Keywords ***
 productSection
     mouse over    ${men}
@@ -54,4 +55,3 @@ ShippingInformation
     title should be    Payment - RDKLU - Checkout
     click element    ${returntoshipping}
     title should be    Shipping - RDKLU - Checkout
-

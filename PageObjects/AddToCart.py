@@ -7,4 +7,3 @@ size_XL = "xpath://option[@value='XL']"
 reduceItemQuantityBtn = "xpath://button[@aria-label='Reduce item quantity by one']"
 increaseItemQuantityBtn = "xpath://button[@aria-label='Increase item quantity by one']"
 checkOutBtn = "xpath://button[@name='checkout']"
-

@@ -1,251 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-25T04:54:10.392162" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-31T04:18:00.307145" rpa="false" schemaversion="5">
 <suite id="s1" name="TC BuyProduct" source="C:\Users\pratik.b.dhake\PycharmProjects\RobotAssignment\TestCases\TC_BuyProduct.robot">
 <test id="s1-t1" name="BuyingProduct" line="10">
-<kw name="LoginTest" owner="login_resources" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:11.369040" level="INFO">Opening browser 'firefox' to base url 'https://www.rdklu.com/collections/mens'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-01-25T04:54:11.368041" elapsed="23.426836"/>
+<kw name="LoginTest" type="SETUP">
+<msg time="2024-01-31T04:18:02.388705" level="FAIL">No keyword with name 'LoginTest' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" start="2024-01-31T04:18:02.388705" elapsed="0.000000">No keyword with name 'LoginTest' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-01-25T04:54:34.795878" elapsed="0.099126"/>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-31T04:18:02.389809" elapsed="0.001005"/>
 </kw>
-<status status="PASS" start="2024-01-25T04:54:11.367041" elapsed="23.528963"/>
-</kw>
-<kw name="productSection" owner="BuyProduct_resources">
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:34.906833" level="INFO">Simulating Mouse Over on element 'xpath://summary[normalize-space()='Men']'.</msg>
-<arg>${men}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:34.905329" elapsed="0.694270"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${printedcotton}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-01-25T04:54:35.600430" elapsed="0.114147"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:35.716664" level="INFO">Clicking element 'xpath://a[@class='site-nav__dropdown-link'][normalize-space()='Printed Cotton Tees']'.</msg>
-<arg>${printedcotton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:35.715076" elapsed="4.893685"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:40.625869" level="INFO">Page title is 'Cotton Printed Tees – RDKLU'.</msg>
-<arg>Cotton Printed Tees – RDKLU</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-01-25T04:54:40.610016" elapsed="0.016347"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:40.627415" level="INFO">Clicking element 'xpath://a[@href='/collections/cotton-printed-tees/products/rdklu-cotton-printed-tee-12']'.</msg>
-<arg>${tees_12}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:40.626915" elapsed="2.058944"/>
-</kw>
-<status status="PASS" start="2024-01-25T04:54:34.904333" elapsed="7.782336"/>
-</kw>
-<kw name="addToCart" owner="BuyProduct_resources">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:42.692980" level="INFO">Clicking element 'SingleOptionSelector-template--21939945111868__main-7010792702063-option-0'.</msg>
-<arg>${sizebox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:42.691143" elapsed="1.164629"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:43.857181" level="INFO">Selecting options from selection list 'SingleOptionSelector-template--21939945111868__main-7010792702063-option-0' by value XL.</msg>
-<arg>${sizebox}</arg>
-<arg>XL</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T04:54:43.855772" elapsed="0.980573"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:44.837414" level="INFO">Clicking button 'xpath://button[@name='add']'.</msg>
-<arg>${addtocartbtn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:44.836841" elapsed="0.336956"/>
-</kw>
-<status status="PASS" start="2024-01-25T04:54:42.690032" elapsed="2.483765"/>
-</kw>
-<kw name="chekcoutItem" owner="BuyProduct_resources">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${checkoutbtn}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-01-25T04:54:45.177861" elapsed="1.324226"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:46.505171" level="INFO">Clicking element 'xpath://button[@aria-label='Increase item quantity by one']'.</msg>
-<arg>${increaseitemquantitybtn}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:46.503458" elapsed="0.326990"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:46.831676" level="INFO">Clicking button 'xpath://button[@name='checkout']'.</msg>
-<arg>${checkoutbtn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:46.830952" elapsed="2.886256"/>
-</kw>
-<status status="PASS" start="2024-01-25T04:54:45.175859" elapsed="4.541854"/>
-</kw>
-<kw name="ShippingInformation" owner="BuyProduct_resources">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:49.724429" level="INFO">Typing text 'pratik.blr2000@gmail.com' into text field 'xpath://input[@id='email']'.</msg>
-<arg>${emailTxtBox}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:49.722934" elapsed="1.082470"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:50.807026" level="INFO">Typing text 'Pratik' into text field 'Xpath://input[@name='firstName']'.</msg>
-<arg>${firstnametxtbox}</arg>
-<arg>${firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:50.806025" elapsed="0.444716"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:51.252155" level="INFO">Typing text 'Dhake' into text field 'xpath://input[@name='lastName']'.</msg>
-<arg>${lastnametxtbox}</arg>
-<arg>${lastname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:51.251651" elapsed="0.463338"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:51.717328" level="INFO">Typing text 'BTM,stage 2' into text field 'xpath://input[@id='shipping-address1']'.</msg>
-<arg>${addresstxtbox}</arg>
-<arg>${address}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:51.716067" elapsed="0.771426"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:52.488989" level="INFO">Typing text 'Bangalore' into text field 'xpath://input[@name='city']'.</msg>
-<arg>${citytxtbox}</arg>
-<arg>${city}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:52.488489" elapsed="0.202140"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:52.692118" level="INFO">Clicking element 'xpath://select[@name='zone']'.</msg>
-<arg>${statedropdown}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:52.691339" elapsed="0.450267"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:53.143524" level="INFO">Selecting options from selection list 'xpath://select[@name='zone']' by value KA.</msg>
-<arg>${statedropdown}</arg>
-<arg>KA</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T04:54:53.142643" elapsed="0.443189"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:53.587336" level="INFO">Typing text '560076' into text field 'xpath://input[@name='postalCode']'.</msg>
-<arg>${pincodetxtbox}</arg>
-<arg>${pincode}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:53.586326" elapsed="0.173379"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:53.760734" level="INFO">Typing text '9763824464' into text field 'xpath://input[@name='phone']'.</msg>
-<arg>${phonenotxtbox}</arg>
-<arg>${phoneno}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:53.760734" elapsed="0.251316"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-01-25T04:54:57.013815" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-01-25T04:54:54.013047" elapsed="3.001267"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:57.015326" level="INFO">Clicking element 'xpath://button[@class='QT4by _1fragemfk rqC98 hodFu _7QHNJ VDIfJ j6D1f janiy']'.</msg>
-<arg>${continuetoshipbtn}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:57.014314" elapsed="0.371530"/>
-</kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:57.388007" level="INFO">Selecting checkbox 'xpath://input[@id='marketing_opt_in']'.</msg>
-<arg>${emailmenewsandofferscheckbox}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:57.386345" elapsed="0.057237"/>
-</kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:54:57.444606" level="INFO">Selecting checkbox 'xpath://input[@id='save_shipping_information']'.</msg>
-<arg>${saveinfonxttimecheckbox}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:54:57.443582" elapsed="0.566229"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${continuetopaymentbtn}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-01-25T04:54:58.010309" elapsed="0.071296"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-01-25T04:55:03.082723" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-01-25T04:54:58.082006" elapsed="5.000717"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:55:03.083715" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
-<arg>${continuetopaymentbtn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:55:03.083715" elapsed="0.480254"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${returntoshipping}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-01-25T04:55:03.563969" elapsed="0.051496"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-01-25T04:55:06.616348" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-01-25T04:55:03.615971" elapsed="3.000377"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:55:06.622335" level="INFO">Page title is 'Payment - RDKLU - Checkout'.</msg>
-<arg>Payment - RDKLU - Checkout</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-01-25T04:55:06.616348" elapsed="0.005987"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:55:06.623637" level="INFO">Clicking element 'xpath://a[@class='QT4by eVFmT j6D1f janiy adBMs EP07D']'.</msg>
-<arg>${returntoshipping}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T04:55:06.623637" elapsed="0.391930"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-01-25T04:55:07.029248" level="INFO">Page title is 'Shipping - RDKLU - Checkout'.</msg>
-<arg>Shipping - RDKLU - Checkout</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-01-25T04:55:07.016066" elapsed="0.014218"/>
-</kw>
-<status status="PASS" start="2024-01-25T04:54:49.720872" elapsed="17.309412"/>
-</kw>
-<kw name="CloseBrowser" owner="login_resources" type="TEARDOWN">
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-01-25T04:55:07.038088" elapsed="11.987688"/>
-</kw>
-<status status="PASS" start="2024-01-25T04:55:07.036586" elapsed="11.989190"/>
-</kw>
-<status status="PASS" start="2024-01-25T04:54:11.365037" elapsed="67.662565"/>
+<status status="FAIL" start="2024-01-31T04:18:02.384771" elapsed="0.006043">Setup failed:
+No keyword with name 'LoginTest' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
 </test>
-<status status="PASS" start="2024-01-25T04:54:10.403126" elapsed="68.628553"/>
+<status status="FAIL" start="2024-01-31T04:18:00.318287" elapsed="2.074983"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC BuyProduct">TC BuyProduct</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC BuyProduct">TC BuyProduct</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-01-31T04:18:02.281997" level="ERROR">Error in file 'C:\Users\pratik.b.dhake\PycharmProjects\RobotAssignment\TestCases\TC_BuyProduct.robot' on line 3: Error in file 'C:\Users\pratik.b.dhake\PycharmProjects\RobotAssignment\Resources\login_resources.robot' on line 19: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>

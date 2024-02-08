@@ -1,0 +1,5 @@
+credentials.yaml
+reports.html
+log.html
+output.xml
+*.png
